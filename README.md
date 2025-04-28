@@ -1,5 +1,5 @@
-# BlueSky Application Portal/n
-Project Overview
+# BlueSky Application Portal
+Project Overview /n 
 The BlueSky Application Portal is a secure, user-friendly system designed to manage student applications for the BlueSky program at ETSU. It facilitates applicant data collection, reference management, document uploads, and administrative review with a focus on security, compliance, and performance.
 
 Features
