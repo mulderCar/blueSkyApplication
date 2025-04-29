@@ -49,7 +49,7 @@ def dashboard():
 
     conn = get_db_connection()
     cursor = conn.cursor()
-    cursor.execute('SELECT GradYear, GPA, ACTScore, ApplicationStatus FROM "Applications" WHERE "UserId" = %s', (user_id,))
+    cursor.execute('SELECT "GradYear", "GPA", "ACTScore", "ApplicationStatus" FROM "Applications" WHERE "UserId" = %s', (user_id,))
     application = cursor.fetchone()
     conn.close()
 
