@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for, session
-import pyodbc
+import psycopg2
 import bcrypt
 
 app = Flask(__name__)
@@ -7,11 +7,12 @@ app.secret_key = 'BlueSky_Portal_Application'  # Set a secure secret key!
 
 # Database connection
 def get_db_connection():
-    conn = pyodbc.connect(
-        'DRIVER={ODBC Driver 17 for SQL Server};'
-        'SERVER=GAMINGPC;'
-        'DATABASE=BlueSkyPortal;'
-        'Trusted_Connection=yes;'
+    conn = psycopg2.connect(
+        host="dpg-d083pes9c44c73bg9vu0-a.virginia-postgres.render.com",
+        database="bluesky_portal_db",
+        user="bluesky_portal_db_user",
+        password="oSHzbsY0i15XuypJwin5bMxoCEdLBKC7",
+        port=5432
     )
     return conn
 

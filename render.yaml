@@ -4,4 +4,4 @@ services:
     env: python
     plan: free
     buildCommand: ""
-    startCommand: python /BlueSkyPortalApp/app.py
+    startCommand: python BlueSkyPortalApp/app.py
