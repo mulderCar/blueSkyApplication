@@ -28,10 +28,11 @@ def login():
         cursor = conn.cursor()
         cursor.execute('SELECT * FROM "Users" WHERE "Email" = %s', (email,))
         user = cursor.fetchone()
+        conn.close()
 
-        if user and bcrypt.checkpw(password, user.PasswordHash.encode('utf-8')):
-            session['user_id'] = user.Id
-            session['user_name'] = user.FullName
+        if user and bcrypt.checkpw(password, user[2].encode('utf-8')):  # user[2] is PasswordHash
+            session['user_id'] = user[0]  # user[0] is Id
+            session['user_name'] = user[3]  # user[3] is FullName
             return redirect(url_for('dashboard'))
         else:
             return render_template('login.html', error="Invalid email or password.")
@@ -48,8 +49,9 @@ def dashboard():
 
     conn = get_db_connection()
     cursor = conn.cursor()
-    cursor.execute("SELECT GradYear, GPA, ACTScore, ApplicationStatus FROM Applications WHERE UserId = ?", user_id)
+    cursor.execute('SELECT GradYear, GPA, ACTScore, ApplicationStatus FROM "Applications" WHERE "UserId" = %s', (user_id,))
     application = cursor.fetchone()
+    conn.close()
 
     return render_template('dashboard.html', name=session['user_name'], application=application)
 
@@ -63,4 +65,3 @@ if __name__ == "__main__":
     from os import environ
     port = int(environ.get("PORT", 5000))
     app.run(host="0.0.0.0", port=port)
-
