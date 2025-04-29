@@ -69,3 +69,32 @@ The portal's success will be measured by:
 
 ## Contact
 For questions or contributions, please reach out to the BlueSky Development Team.
+
+# Testing
+
+## For the SQL code refer to database.sql
+
+- Login Information:
+
+| Username                | Password         |
+|--------------------------|------------------|
+| user1@example.com        | hashedpassword1  |
+| user2@example.com        | hashedpassword2  |
+| user3@example.com        | hashedpassword3  |
+| user4@example.com        | hashedpassword4  |
+| user5@example.com        | hashedpassword5  |
+| user6@example.com        | hashedpassword6  |
+| user7@example.com        | hashedpassword7  |
+| user8@example.com        | hashedpassword8  |
+| user9@example.com        | hashedpassword9  |
+| user10@example.com       | hashedpassword10 |
+| user11@example.com       | hashedpassword11 |
+| user12@example.com       | hashedpassword12 |
+| user13@example.com       | hashedpassword13 |
+| user14@example.com       | hashedpassword14 |
+| user15@example.com       | hashedpassword15 |
+| user16@example.com       | hashedpassword16 |
+| user17@example.com       | hashedpassword17 |
+| user18@example.com       | hashedpassword18 |
+| user19@example.com       | hashedpassword19 |
+| user20@example.com       | hashedpassword20 |

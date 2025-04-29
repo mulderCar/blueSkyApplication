@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard - BlueSky Portal</title>
+</head>
+<body>
+    <h1>Welcome, {{ name }}!</h1>
+
+    {% if application %}
+    <h2>Your Application Info</h2>
+    <ul>
+        <li>Graduation Year: {{ application.GradYear }}</li>
+        <li>GPA: {{ application.GPA }}</li>
+        <li>ACT Score: {{ application.ACTScore }}</li>
+        <li>Status: {{ application.ApplicationStatus }}</li>
+    </ul>
+    {% else %}
+    <p>You have not started an application yet.</p>
+    {% endif %}
+
+    <a href="{{ url_for('logout') }}">Logout</a>
+</body>
+</html>
