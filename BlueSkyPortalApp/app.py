@@ -26,7 +26,7 @@ def login():
 
         conn = get_db_connection()
         cursor = conn.cursor()
-        cursor.execute("SELECT Id, PasswordHash, FullName FROM Users WHERE Email = ?", email)
+        cursor.execute('SELECT * FROM "Users" WHERE "Email" = %s', (email,))
         user = cursor.fetchone()
 
         if user and bcrypt.checkpw(password, user.PasswordHash.encode('utf-8')):
