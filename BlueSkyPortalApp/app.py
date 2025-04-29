@@ -13,6 +13,7 @@ def get_db_connection():
         user="bluesky_portal_db_user",
         password="oSHzbsY0i15XuypJwin5bMxoCEdLBKC7",
         port=5432
+        sslmode='require'
     )
     return conn
 
