@@ -1,0 +1,99 @@
+/* Base Page Styles */
+body {
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: linear-gradient(to left top, #255ba8, #214f93, #1d447e, #19396a, #152e57, #2a395e, #3b4464, #4b506b, #76788e, #a3a3b2, #d0d0d8, #ffffff);
+    height: 100vh;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Form Styles */
+form {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    max-width: 90%;
+}
+
+/* Label and Input Fields */
+label {
+    margin-bottom: 10px;
+    font-size: 20px;
+    text-align: left;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"],
+input[type="number"],
+input[type="file"] {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Buttons */
+button, #mybutton {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background: linear-gradient(to bottom, #2174cc 5%, #ad9603 100%);
+    background-color: #2174cc;
+    border: none;
+    border-radius: 8px;
+    display: inline-block;
+    cursor: pointer;
+    color: #fff7ff;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 13px 32px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+button:hover, #mybutton:hover {
+    background: linear-gradient(to bottom, #ad9603 5%, #2174cc 100%);
+    background-color: #ad9603;
+}
+
+button:active, #mybutton:active {
+    position: relative;
+    top: 1px;
+}
+
+/* Error Message */
+.error {
+    color: #ff6b6b;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Responsive Tweaks */
+@media (max-width: 600px) {
+    form {
+        width: 90%;
+        padding: 20px;
+    }
+
+    body {
+        font-size: 20px;
+    }
+}
